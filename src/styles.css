@@ -3,16 +3,20 @@
 }
 
 .marks .land {
-  fill: #137b80;
+  fill: #c0c0c0;
   stroke: none;
 }
 
 .marks .interiors {
-  stroke: #339498;
+  stroke: none;
   fill: none;
 }
 
 .marks .graticules {
   fill: none;
   stroke: #c1c1c1;
+}
+
+circle {
+  fill: #137b80;
 }

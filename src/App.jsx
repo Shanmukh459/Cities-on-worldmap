@@ -1,23 +1,29 @@
 import { useWorldAtlas } from './useWorldAtlas'
 import { Marks } from './Marks'
-
-
+import { useCities } from './useCities'
+import { scaleSqrt, max } from 'd3'
 
 const width = 960
 const height = 560
 
 function App() {
   const worldAtlas = useWorldAtlas()
+  const cities = useCities()
   
-  if(!worldAtlas) {
+  if(!worldAtlas || !cities) {
     return <h1>Loading...</h1>
   }
 
-  console.log(worldAtlas)
+  const maxRadius = 5
+
+  const sizeValue = d => d.population
+  const sizeScale = scaleSqrt()
+    .domain([0, max(cities, sizeValue)])
+    .range([0, maxRadius])
   
   return (
     <svg height={height} width={width}>
-      <Marks worldAtlas={worldAtlas} />
+      <Marks worldAtlas={worldAtlas} cities={cities} sizeScale={sizeScale} sizeValue={sizeValue} />
     </svg>
   )
 }
