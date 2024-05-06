@@ -1,8 +1,7 @@
-import { geoEqualEarth, geoPath } from 'd3'
 import { useWorldAtlas } from './useWorldAtlas'
+import { Marks } from './Marks'
 
-const projection = geoEqualEarth()
-const path = geoPath(projection)
+
 
 const width = 960
 const height = 560
@@ -18,10 +17,7 @@ function App() {
   
   return (
     <svg height={height} width={width}>
-      {worldAtlas.features.map((feature) => (
-        <path d={path(feature)} />
-      ))}
-
+      <Marks worldAtlas={worldAtlas} />
     </svg>
   )
 }
