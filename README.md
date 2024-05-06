@@ -1,8 +1,18 @@
-# React + Vite
+# Cities on World Map
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This project is an extension to one of my previous projects which is world map plot using D3 and React.
+- The addition feature which I have worked on in this project is plotting cities on the map
+- The cities are marked based on its population i.e., the radius of the circle which represents a particular city is proportional to the population.
+- The world map data is from [World Atlas](https://unpkg.com/world-atlas@2.0.2/countries-50m.json)
+- The Cities data is from Simplemaps: [World Cities Database](https://simplemaps.com/data/world-cities)
 
-Currently, two official plugins are available:
+## Tech/Libraries Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- D3
+- Topojson
+- React
+
+## Screenshot
+
+
+Happy Coding!
